@@ -76,6 +76,9 @@
                                 <state key="normal" image="info.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xcq-SA-4w5" kind="presentation" modalTransitionStyle="crossDissolve" id="80b-nB-oUw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXw-nK-DcS">
                                 <rect key="frame" x="811" y="196.5" width="21" height="21"/>
@@ -121,13 +124,77 @@
             </objects>
             <point key="canvasLocation" x="-196.20535714285714" y="92.753623188405811"/>
         </scene>
+        <!--Credit View Controller-->
+        <scene sceneID="5B3-BW-OaI">
+            <objects>
+                <viewController id="xcq-SA-4w5" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QHZ-lV-oWd">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-nx-xRJ">
+                                <rect key="frame" x="284" y="20" width="548" height="353"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Up and Down Game
+
+• 슬라이더를 이용해 숫자를 맞춰보세요
+• 5번의 시도가 주어집니다.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-yq-ONs">
+                                <rect key="frame" x="64" y="20" width="23" height="25.5"/>
+                                <state key="normal" image="xmark.rectangle.portrait" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="xcq-SA-4w5" eventType="touchUpInside" id="bIM-TJ-Ih1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="LMT-X1-gwM">
+                                <rect key="frame" x="64" y="107" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ebv-7P-xUQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="RxB-C5-jzn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W8d-yV-b9s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MfY-nx-xRJ" firstAttribute="top" secondItem="W8d-yV-b9s" secondAttribute="top" constant="20" id="1a7-uU-gB8"/>
+                            <constraint firstItem="W8d-yV-b9s" firstAttribute="trailing" secondItem="MfY-nx-xRJ" secondAttribute="trailing" constant="20" id="2uI-bQ-c7v"/>
+                            <constraint firstItem="MfY-nx-xRJ" firstAttribute="leading" secondItem="LMT-X1-gwM" secondAttribute="trailing" constant="20" id="ANt-yy-37T"/>
+                            <constraint firstItem="W8d-yV-b9s" firstAttribute="bottom" secondItem="MfY-nx-xRJ" secondAttribute="bottom" constant="20" id="Cko-YQ-DSt"/>
+                            <constraint firstItem="Ohd-yq-ONs" firstAttribute="top" secondItem="W8d-yV-b9s" secondAttribute="top" constant="20" id="HEC-Ad-TBd"/>
+                            <constraint firstItem="LMT-X1-gwM" firstAttribute="centerY" secondItem="QHZ-lV-oWd" secondAttribute="centerY" id="Luj-D6-efH"/>
+                            <constraint firstItem="LMT-X1-gwM" firstAttribute="leading" secondItem="Ohd-yq-ONs" secondAttribute="leading" id="W5u-xb-6FP"/>
+                            <constraint firstItem="Ohd-yq-ONs" firstAttribute="leading" secondItem="W8d-yV-b9s" secondAttribute="leading" constant="20" id="zwS-aM-Gyj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGq-zv-1co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512.94642857142856" y="92.753623188405811"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="xmark.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="yagom_symbol" width="167" height="160.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
